@@ -623,3 +623,6 @@ Transfer/sec:      2.00MB 每秒钟读取2兆数据量
 
 ### 2.（必做）写一段代码，使用HttpClient或OKHttp访问http://localhost:8801,代码提交到GitHub。
 
+HttpClient 例子详见 HttpClientTest.java
+
+OKHttp例子详见OKHttpClientTest.java
