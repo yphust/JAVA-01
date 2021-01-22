@@ -1,0 +1,29 @@
+Java HotSpot(TM) 64-Bit Server VM (25.231-b11) for bsd-amd64 JRE (1.8.0_231-b11), built on Oct  5 2019 03:15:25 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 16777216k(1604040k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:InitialHeapSize=2147483648 -XX:MaxHeapSize=2147483648 -XX:MaxNewSize=348966912 -XX:MaxTenuringThreshold=6 -XX:NewSize=348966912 -XX:OldPLABSize=16 -XX:OldSize=697933824 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+2021-01-22T12:18:22.737-0800: 0.291: [GC (Allocation Failure) 2021-01-22T12:18:22.737-0800: 0.291: [ParNew: 272640K->34048K(306688K), 0.0391030 secs] 272640K->82753K(2063104K), 0.0392476 secs] [Times: user=0.06 sys=0.08, real=0.04 secs] 
+2021-01-22T12:18:22.776-0800: 0.330: [GC (CMS Initial Mark) [1 CMS-initial-mark: 48705K(1756416K)] 83295K(2063104K), 0.0004515 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-01-22T12:18:22.777-0800: 0.331: [CMS-concurrent-mark-start]
+2021-01-22T12:18:22.801-0800: 0.355: [CMS-concurrent-mark: 0.024/0.024 secs] [Times: user=0.03 sys=0.02, real=0.03 secs] 
+2021-01-22T12:18:22.801-0800: 0.355: [CMS-concurrent-preclean-start]
+2021-01-22T12:18:22.804-0800: 0.357: [CMS-concurrent-preclean: 0.003/0.003 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2021-01-22T12:18:22.804-0800: 0.358: [CMS-concurrent-abortable-preclean-start]
+2021-01-22T12:18:22.828-0800: 0.382: [GC (Allocation Failure) 2021-01-22T12:18:22.828-0800: 0.382: [ParNew: 306688K->34047K(306688K), 0.0556637 secs] 355393K->163092K(2063104K), 0.0557750 secs] [Times: user=0.07 sys=0.09, real=0.06 secs] 
+2021-01-22T12:18:22.932-0800: 0.486: [GC (Allocation Failure) 2021-01-22T12:18:22.932-0800: 0.486: [ParNew: 306687K->34048K(306688K), 0.0573205 secs] 435732K->241458K(2063104K), 0.0574275 secs] [Times: user=0.18 sys=0.04, real=0.06 secs] 
+2021-01-22T12:18:23.034-0800: 0.588: [GC (Allocation Failure) 2021-01-22T12:18:23.034-0800: 0.588: [ParNew: 306688K->34048K(306688K), 0.0438038 secs] 514098K->315083K(2063104K), 0.0439204 secs] [Times: user=0.12 sys=0.05, real=0.04 secs] 
+2021-01-22T12:18:23.127-0800: 0.681: [GC (Allocation Failure) 2021-01-22T12:18:23.127-0800: 0.681: [ParNew: 306688K->34048K(306688K), 0.0554170 secs] 587723K->397598K(2063104K), 0.0555352 secs] [Times: user=0.16 sys=0.04, real=0.06 secs] 
+2021-01-22T12:18:23.225-0800: 0.779: [GC (Allocation Failure) 2021-01-22T12:18:23.225-0800: 0.779: [ParNew: 306176K->34048K(306688K), 0.0473259 secs] 669727K->476185K(2063104K), 0.0474298 secs] [Times: user=0.12 sys=0.05, real=0.05 secs] 
+2021-01-22T12:18:23.314-0800: 0.868: [GC (Allocation Failure) 2021-01-22T12:18:23.314-0800: 0.868: [ParNew: 306688K->34048K(306688K), 0.0468123 secs] 748825K->552214K(2063104K), 0.0469221 secs] [Times: user=0.13 sys=0.05, real=0.05 secs] 
+2021-01-22T12:18:23.406-0800: 0.960: [GC (Allocation Failure) 2021-01-22T12:18:23.406-0800: 0.960: [ParNew: 306688K->34048K(306688K), 0.0444506 secs] 824854K->626901K(2063104K), 0.0445493 secs] [Times: user=0.12 sys=0.04, real=0.05 secs] 
+2021-01-22T12:18:23.496-0800: 1.050: [GC (Allocation Failure) 2021-01-22T12:18:23.496-0800: 1.050: [ParNew: 306688K->34047K(306688K), 0.0499829 secs] 899541K->704282K(2063104K), 0.0500672 secs] [Times: user=0.14 sys=0.04, real=0.05 secs] 
+Heap
+ par new generation   total 306688K, used 45549K [0x0000000740000000, 0x0000000754cc0000, 0x0000000754cc0000)
+  eden space 272640K,   4% used [0x0000000740000000, 0x0000000740b3b780, 0x0000000750a40000)
+  from space 34048K,  99% used [0x0000000752b80000, 0x0000000754cbfeb8, 0x0000000754cc0000)
+  to   space 34048K,   0% used [0x0000000750a40000, 0x0000000750a40000, 0x0000000752b80000)
+ concurrent mark-sweep generation total 1756416K, used 670234K [0x0000000754cc0000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 2741K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
