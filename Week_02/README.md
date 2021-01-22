@@ -386,7 +386,7 @@ Transfer/sec:      1.28MB
 
 每种垃圾收集器之间有连线，表示他们可以搭配使用。
 
-[![sIljfA.png](https://s3.ax1x.com/2021/01/22/sIljfA.png)](https://imgchr.com/i/sIljfA)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_01.png)
 
 #### 二、新生代垃圾收集器
 
@@ -396,7 +396,7 @@ Serial 是一款用于新生代的单线程收集器，采用复制算法进行�
 
 如下是 Serial 收集器和 Serial Old 收集器结合进行垃圾收集的示意图，当用户线程都执行到安全点时，所有线程暂停执行，Serial 收集器以单线程，采用复制算法进行垃圾收集工作，收集完之后，用户线程继续开始执行。
 
-[![sIr780.png](https://s3.ax1x.com/2021/01/22/sIr780.png)](https://imgchr.com/i/sIr780)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_02.png)
 
 **适用场景**：Client 模式（桌面应用）；单核服务器。
 
@@ -408,7 +408,7 @@ ParNew 就是一个 Serial 的多线程版本，其它与Serial并无区别。Pa
 
 如下是 ParNew 收集器和 Serial Old 收集器结合进行垃圾收集的示意图，当用户线程都执行到安全点时，所有线程暂停执行，ParNew 收集器以多线程，采用复制算法进行垃圾收集工作，收集完之后，用户线程继续开始执行。
 
-[![sIs0MT.png](https://s3.ax1x.com/2021/01/22/sIs0MT.png)](https://imgchr.com/i/sIs0MT)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_03.png)
 
 **适用场景：**多核服务器；与 CMS 收集器搭配使用。当使用  -XX:+UserConcMarkSweepGC 来选择 CMS 作为老年代收集器时，新生代收集器默认就是 ParNew，也可以用  -XX:+UseParNewGC 来指定使用 ParNew 作为新生代收集器。
 
@@ -427,7 +427,7 @@ Parallel Scavenge 也是一款用于新生代的多线程收集器，与 ParNew 
 
 如下是 Parallel 收集器和 Parallel Old  收集器结合进行垃圾收集的示意图，在新生代，当用户线程都执行到安全点时，所有线程暂停执行，ParNew  收集器以多线程，采用复制算法进行垃圾收集工作，收集完之后，用户线程继续开始执行；在老年代，当用户线程都执行到安全点时，所有线程暂停执行，Parallel  Old 收集器以多线程，采用标记整理算法进行垃圾收集工作。
 
-[![sIsWz6.png](https://s3.ax1x.com/2021/01/22/sIsWz6.png)](https://imgchr.com/i/sIsWz6)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_04.png)
 
 **适用场景：**注重吞吐量，高效利用 CPU，需要高效运算且不需要太多交互。
 
@@ -441,7 +441,7 @@ Serial Old 收集器是 Serial 的老年代版本，同样是一个单线程收�
 
 如下图是 Serial 收集器和 Serial Old 收集器结合进行垃圾收集的示意图：
 
-[![sIsxOS.png](https://s3.ax1x.com/2021/01/22/sIsxOS.png)](https://imgchr.com/i/sIsxOS)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_02.png)
 
 **适用场景：**Client 模式（桌面应用）；单核服务器；与 Parallel Scavenge 收集器搭配；作为 CMS 收集器的后备预案。
 
@@ -459,7 +459,7 @@ CMS 收集器是一种以最短回收停顿时间为目标的收集器，以 “
 
 整个过程耗时最长的并发标记和并发清除都是和用户线程一起工作，所以从总体上来说，CMS 收集器垃圾收集可以看做是和用户线程并发执行的。
 
-[![sIy3Sx.png](https://s3.ax1x.com/2021/01/22/sIy3Sx.png)](https://imgchr.com/i/sIy3Sx)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_05.png)
 
 **CMS 收集器也存在一些缺点：**
 
@@ -475,7 +475,7 @@ CMS 收集器是一种以最短回收停顿时间为目标的收集器，以 “
 
 Parallel Old 收集器是 Parallel Scavenge 的老年代版本，是一个多线程收集器，采用标记-整理算法。可以与 Parallel Scavenge 收集器搭配，可以充分利用多核 CPU 的计算能力。
 
-[![sIyfts.png](https://s3.ax1x.com/2021/01/22/sIyfts.png)](https://imgchr.com/i/sIyfts)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_04.png)
 
 **适用场景：**与Parallel Scavenge 收集器搭配使用；注重吞吐量。jdk7、jdk8 默认使用该收集器作为老年代收集器，使用 -XX:+UseParallelOldGC 来指定使用 Paralle Old 收集器。
 
@@ -485,7 +485,7 @@ Parallel Old 收集器是 Parallel Scavenge 的老年代版本，是一个多线
 
 G1 收集器是 jdk1.7 才正式引用的商用收集器，现在已经成为 jdk9  默认的收集器。前面几款收集器收集的范围都是新生代或者老年代，G1 进行垃圾收集的范围是整个堆内存，它采用 “ 化整为零 ”  的思路，把整个堆内存划分为多个大小相等的独立区域（Region），在 G1 收集器中还保留着新生代和老年代的概念，它们分别都是一部分  Region，如下图：
 
-[![sIyTXT.png](https://s3.ax1x.com/2021/01/22/sIyTXT.png)](https://imgchr.com/i/sIyTXT)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_07.png)
 
 每一个方块就是一个区域，每个区域可能是 Eden、Survivor、老年代，每种区域的数量也不一定。JVM  启动时会自动设置每个区域的大小（1M ~ 32M，必须是 2 的次幂），最多可以设置 2048 个区域（即支持的最大堆内存为 32M*2048 =  64G），假如设置 -Xmx8g -Xms8g，则每个区域大小为 8g/2048=4M。
 
@@ -495,7 +495,7 @@ G1 收集器可以 “ 建立可预测的停顿时间模型 ”，它维护了�
 
 **如下图所示，G1 收集器收集器收集过程有初始标记、并发标记、最终标记、筛选回收，和 CMS 收集器前几步的收集过程很相似：**
 
-[![sIyXN9.png](https://s3.ax1x.com/2021/01/22/sIyXN9.png)](https://imgchr.com/i/sIyXN9)
+![](https://gitee.com/yphust/images/raw/master/image/PPT%E5%9B%BE_06.png)
 
 **① 初始标记：**标记出 GC Roots 直接关联的对象，这个阶段速度较快，需要停止用户线程，单线程执行。
 
