@@ -298,6 +298,12 @@ kill掉被占用的端口的进程: kill PID
 
    每一个进程都会有一个PID
 
+# Typora配置图片自动上传到图床
+
+https://www.cnblogs.com/qtzd/p/12554902.html
+
+https://blog.csdn.net/abelethan/article/details/105145817?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242
+
 ### 2.使用压测工具（wrk或superbenchmark）演练gateway-server-0.0.1-SNAPSHOT.jar示例
 
 #### 使用串行GC
