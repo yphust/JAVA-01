@@ -386,8 +386,6 @@ Transfer/sec:      1.28MB
 
 每种垃圾收集器之间有连线，表示他们可以搭配使用。
 
-![](https://github.com/yphust/images/blob/main/PPT图_01.png?raw=true)
-
 [![sIljfA.png](https://s3.ax1x.com/2021/01/22/sIljfA.png)](https://imgchr.com/i/sIljfA)
 
 #### 二、新生代垃圾收集器
