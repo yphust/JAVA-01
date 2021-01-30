@@ -26,7 +26,7 @@
 
    通过下面的截图可以看出，在请求头中确实添加了我们自己添加的字符串yp01:yp01
 
-   <span style="color:red">**但是为什么请求一次会输出两次yp01呢？**请大明老师帮忙看下</span>
+   ### **但是为什么请求一次会输出两次yp01呢？**请大明老师帮忙看下
 
    ![image-20210131014829117](https://gitee.com/yphust/images/raw/master/image/image-20210131014829117.png)
 
